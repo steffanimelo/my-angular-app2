@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-warning-alert',
-  // template: 
-  // `<app-warning-alert></app-warning-alert>`,
   templateUrl: './warning-alert.component.html',
   styleUrls: ['./warning-alert.component.css']
 })
