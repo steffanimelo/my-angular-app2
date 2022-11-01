@@ -5,8 +5,6 @@
             <hr>
             <app-servers></app-servers>
             <hr>
-            <app-server></app-server>
-            <hr>
             <app-warning-alert></app-warning-alert>
             <hr>
             <app-success-alert></app-success-alert>
@@ -21,8 +19,17 @@
             <button 
                 class="btn btn-primary" 
                 [disabled]="username === ''"
-                (click)="username = ''">Reset User</button>
-            
+                (click)="username = ''">Reset User
+            </button>
+            <hr>
+            <!-- <button class="btn btn-primary"
+            (click)="showSecret = !showSecret">Display Details</button> -->
+            <button class="btn btn-primary"
+            (click)="onToggleDetails()">Display Details</button>
+            <p *ngIf="showSecret">Secret Password = tuna</p>
+            <div *ngFor="let logItem of log; let i = index"
+            [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+            [ngClass]="{'white-text' : i >= 4}">{{ logItem }}</div>
         </div>
 
     </div>
